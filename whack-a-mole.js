@@ -39,17 +39,17 @@ let highScoreBoard = document.createElement('p')
 highScoreBoard.textContent = 'High Score: 0'
 document.body.append(highScoreBoard)
 
-const playAgain = function () {
-  counter = 0
-  startGame()
-  playAgainButton.classList.add('hidden')
-}
+// const playAgain = function () {
+//   counter = 0
+//   startGame()
+//   playAgainButton.classList.add('hidden')
+// }
 //create playAgain button all via JS
-let playAgainButton = document.createElement('button')
-playAgainButton.addEventListener('click', playAgain)
-playAgainButton.textContent = 'Play again?'
-document.body.append(playAgainButton)
-playAgainButton.classList.add('hidden')
+// let playAgainButton = document.createElement('button')
+// playAgainButton.addEventListener('click', playAgain)
+// playAgainButton.textContent = 'Play again?'
+// document.body.append(playAgainButton)
+// playAgainButton.classList.add('hidden')
 
 let counter = 0
 const molesWhacked = function () {
@@ -120,8 +120,10 @@ function startTimer() {
       clearInterval(token) //lines 79-81 put in separate end game function, call function here  then in end game function also call highsore calc function
       token = null
       addHighScore()
-      playAgainButton.classList.remove('hidden')
+      // playAgainButton.classList.remove('hidden')
       gameOver = true
+      stopGame()
+      startButton.textContent = 'Play again?'
     }
   }, 1000)
 }
