@@ -84,6 +84,7 @@ function moleClicked(e) {
 function startGame() {
   gameOver = false
   startButton.disabled = true
+  counter = 0
   startTimer()
 }
 
